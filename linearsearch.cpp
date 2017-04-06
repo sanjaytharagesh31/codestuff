@@ -2,8 +2,8 @@
 using namespace std;
 
 int main(){
-	int num,item,arr[100],c=1;
-	cout<<"How many elements are there (max 100):";
+	int num,item,arr[50],c=1;
+	cout<<"How many elements are there (max 50):";
 	cin>>num;
 	cout<<"Enter the elements one by one:";
 	for(int i=0;i<num;i++)
