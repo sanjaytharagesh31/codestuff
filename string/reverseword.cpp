@@ -1,19 +1,20 @@
-#include<iostream>
-#include<string>
-using namespace std;
-//UNDER CONSTRUCTION
-int main(){
-	char ch[20],ar[10];
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+//RUN IN TURBO C++ 
+void main(){
+	clrscr();
+	char ch[100],ar[10];
 	int p,q,i;
-	cout<<"Program to reverse the words in a string"<<endl;
-	cout<<"Enter a string (end with a space):";
-	cin.getline(ch,20);
+	cout<<"Program to reverse the words in a string";
+	cout<<"Enter a string (end with a space):"<<"\n";
+	gets(ch);
 	p=-1;
 	q=0;
 	for(i=0;ch[i]!='\0';i++){
 		if(ch[i]!=' ')
 			ar[++p]=ch[i];
-		
+
 		else{
 			while(p>=0){
 				ch[q]=ar[p];
@@ -24,7 +25,6 @@ int main(){
 		}
 	}
 	cout<<"Output:";
-	for(i=0;ch[i]!='\0';i++)
-	cout<<ch[i];
-	return 0;
+	puts(ch);
+	getch();
 }
