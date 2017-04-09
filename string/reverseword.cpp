@@ -16,11 +16,8 @@ void main(){
 			ar[++p]=ch[i];
 
 		else{
-			while(p>=0){
-				ch[q]=ar[p];
-				q++;
-				p--;
-			}
+			while(p>=0)
+				ch[q++]=ar[p--];		
 			q++;
 		}
 	}
