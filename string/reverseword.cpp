@@ -4,25 +4,23 @@ using namespace std;
 //UNDER CONSTRUCTION
 int main(){
 	char ch[20],ar[10];
-	int b,p,q,i;
+	int p,q,i;
 	cout<<"Program to reverse the words in a string"<<endl;
 	cout<<"Enter a string (end with a space):";
-	gets(ch);
-	p=0;
+	cin.getline(ch,20);
+	p=-1;
 	q=0;
 	for(i=0;ch[i]!='\0';i++){
 		if(ch[i]!=' ')
-			ar[p++]=ch[i];
+			ar[++p]=ch[i];
 		
 		else{
-			b=p-1;
-			while(b>=0){
-				ch[q]=ar[b];
+			while(p>=0){
+				ch[q]=ar[p];
 				q++;
-				b--;
+				p--;
 			}
 			q++;
-			p=0;
 		}
 	}
 	cout<<"Output:";
@@ -30,6 +28,3 @@ int main(){
 	cout<<ch[i];
 	return 0;
 }
-				
-			
-			
