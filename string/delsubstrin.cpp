@@ -1,9 +1,10 @@
 #include<iostream>
 using namespace std;
-
+//PROGRAM TO DELETE A SUBSTRING FROM A MAIN STRING
 int main(){
 	int i,j,k,len1,len2,pos;
 	char str[100],sub[50];
+	cout<<"PROGRAM TO DELETE A SUBSTRING FROM A MAIN STRING"<<endl;
 	cout<<"Enter a string:";
 	cin>>str;
 	cout<<"Enter a substring to delete from the main string:";
