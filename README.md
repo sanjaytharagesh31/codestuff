@@ -23,6 +23,7 @@ errors||bugs ? please do pull request : Add new code;
 * [Bubble-Srot](sorting/bubblesort.cpp) - Array implemention.
 * [Insertion-Srot](sorting/insertionsort.cpp) - Array implemention.
 * [Selection-Srot](sorting/selectionsort.cpp) - Array implemention.
+* [Vector-sort](sorting/vectsort.cpp) - Vector implementation.
 #### String
 * [Delete Sub-string](string/delsubstrin.cpp) - To delete a substring from a main string.
 * [Reverse the word](string/reverseword.cpp) - To reverse the words in a string.
