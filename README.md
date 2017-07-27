@@ -8,7 +8,8 @@ errors||bugs ? please do pull request : Add new code;
 * [Check Prime](array/chkprime.cpp) - To check whether the given number is prime or not.
 * [Prime Factorisation](array/factor.cpp) - To print the prime factors of a number.
 * [Delete duplicate](array/delduplicate.cpp) - To delete duplicate elements from an array.
-* []() - Sieve of Eratosthenis (own logic).
+* [Factors](array/factor.cpp) - Sieve of Eratosthenis (own logic).
+* [Factorial](array/factorial.cpp) - To find factorial of a number.
 #### Files
 * [Count vowels,letters,words..](file/count.cpp) - To count number of lines, vowels, words, letters in a file.
 #### Linked List
