@@ -11,6 +11,7 @@ errors||bugs ? please do pull request : Add new code;
 * [Factors](problems/factor.cpp) - Sieve of Eratosthenis (own logic).
 * [Factorial](problems/factorial.cpp) - To find factorial of a number.
 * [Sum of digits](problems/sumofdigits.cpp) - To find the sum of digits of a given number.
+* [Store Credit](problems/credit.cpp) - You receive a credit C at a local store and would like to buy two items. You first walk through the store and create a list L of all available items. From this list you would like to buy two items that add up to the entire value of the credit. The solution you provide will consist of the two integers indicating the positions of the items in your list (smaller number first)..
 #### Files
 * [Count vowels,letters,words..](file/count.cpp) - To count number of lines, vowels, words, letters in a file.
 #### Linked List
