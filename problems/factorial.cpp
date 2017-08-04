@@ -1,7 +1,8 @@
 #include<iostream>
 using namespace std;
 int main(){
-  int num, res=1;
+  int num;
+  long long res=1;
   cin>>num;
   if(num==0)
     cout<<"0"<<endl;
