@@ -14,6 +14,7 @@ errors||bugs ? please do pull request : Add new code;
 * [Store Credit](problems/credit.cpp) - You receive a credit C at a local store and would like to buy two items. You first walk through the store and create a list L of all available items. From this list you would like to buy two items that add up to the entire value of the credit. The solution you provide will consist of the two integers indicating the positions of the items in your list (smaller number first)..
 #### Files
 * [Count vowels,letters,words..](file/count.cpp) - To count number of lines, vowels, words, letters in a file.
+* [Read and write a file](file/rdwr.cpp) - To read and write in a file.
 #### Linked List
 * [Stack](linked_list/stack.cpp) - Linked list implimention of stack.
 * [Queue](linked_list/queue.cpp) - Linked list implimention of queue.
