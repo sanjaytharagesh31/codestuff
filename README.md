@@ -25,6 +25,7 @@ errors||bugs ? please do pull request : Add new code;
 * [Triangle](patterns/design1.cpp) - To print Left-Bottom-Triangle.
 * [Pyramid](patterns/design2.cpp) - To print Pyramid.
 * [Triangle](patterns/design3.cpp) - To print Left Bottom Triangle (numbers).
+* [Fibbonacci](patterns/fibbonacci.cpp) - Fibbonacci series printing.
 #### Searching
 * [Linear Search](searching/linearsearch.cpp) - Array implemention.
 * [Binary Search](searching/binarysearch.cpp) - Array implemention.
