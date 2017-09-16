@@ -16,6 +16,7 @@ errors||bugs ? please do pull request : Add new code;
 * [Matrix Multiplication](problems/matmul.cpp) - To calculate product of two matrices.
 * [Memoize Algorithm](problems/memozisation.cpp) - Implementation of memrise algo using arrays in c++.
 * [Factorial](problems/recur.cpp) - To calculate factorial using recursion.
+* [Power of a number](problems/power_rec.cpp) - Power of a number using recursion.
 #### Files
 * [Count vowels,letters,words..](file/count.cpp) - To count number of lines, vowels, words, letters in a file.
 * [Read and write a file](file/rdwr.cpp) - To read and write in a file.
