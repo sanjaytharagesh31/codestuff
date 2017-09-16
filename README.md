@@ -11,7 +11,6 @@ errors||bugs ? please do pull request : Add new code;
 * [Factors](problems/factor.cpp) - Sieve of Eratosthenis (own logic).
 * [Factorial](problems/factorial.cpp) - To find factorial of a number.
 * [Sum of digits](problems/sumofdigits.cpp) - To find the sum of digits of a given number.
-* [Store Credit](problems/credit.cpp) - You receive a credit C at a local store and would like to buy two items. You first walk through the store and create a list L of all available items. From this list you would like to buy two items that add up to the entire value of the credit. The solution you provide will consist of the two integers indicating the positions of the items in your list (smaller number first)..
 * [Leap Year](problems/leap.cpp) - Program to check whether given year is leap.
 * [Matrix Multiplication](problems/matmul.cpp) - To calculate product of two matrices.
 * [Memoize Algorithm](problems/memozisation.cpp) - Implementation of memrise algo using arrays in c++.
