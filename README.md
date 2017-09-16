@@ -14,7 +14,8 @@ errors||bugs ? please do pull request : Add new code;
 * [Store Credit](problems/credit.cpp) - You receive a credit C at a local store and would like to buy two items. You first walk through the store and create a list L of all available items. From this list you would like to buy two items that add up to the entire value of the credit. The solution you provide will consist of the two integers indicating the positions of the items in your list (smaller number first)..
 * [Leap Year](problems/leap.cpp) - Program to check whether given year is leap.
 * [Matrix Multiplication](problems/matmul.cpp) - To calculate product of two matrices.
-* [Memrise Algorithm](problems/memozisation.cpp) - Implementation of memrise algo using arrays in c++.
+* [Memoize Algorithm](problems/memozisation.cpp) - Implementation of memrise algo using arrays in c++.
+* [Factorial](problems/recur.cpp) - To calculate factorial using recursion.
 #### Files
 * [Count vowels,letters,words..](file/count.cpp) - To count number of lines, vowels, words, letters in a file.
 * [Read and write a file](file/rdwr.cpp) - To read and write in a file.
