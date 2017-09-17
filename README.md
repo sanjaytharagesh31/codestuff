@@ -23,6 +23,7 @@ errors||bugs ? please do pull request : Add new code;
 #### Linked List
 * [Stack](linked_list/stack.cpp) - Linked list implimention of stack.
 * [Queue](linked_list/queue.cpp) - Linked list implimention of queue.
+* [Insert Node at N](linked_list/insert_at_N.cpp) - Function to insert an element at a given position in linked list.
 #### Pattern Printing
 * [Triangle](patterns/design1.cpp) - To print Left-Bottom-Triangle.
 * [Pyramid](patterns/design2.cpp) - To print Pyramid.
