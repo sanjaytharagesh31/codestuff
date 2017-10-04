@@ -20,6 +20,7 @@ errors||bugs ? please do pull request : Add new code;
 * [Kadane's Algorithm](problems/kadane.cpp) - Max sum of subarray using Kadane's algorithm.
 * [Unique pair](problems/pair.cpp) - Find Unique pair in an array with pairs of numbers.
 * [Minimum radius](problems/min_radius.cpp) - Find minimum radius such that atleast k point lie inside the circle.
+* [Fibonacci series](problems/fibo.cpp) - Fibonacci series using recursion.
 #### Files
 * [Count vowels,letters,words..](file/count.cpp) - To count number of lines, vowels, words, letters in a file.
 * [Read and write a file](file/rdwr.cpp) - To read and write in a file.
