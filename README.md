@@ -18,6 +18,7 @@ errors||bugs ? please do pull request : Add new code;
 * [Power of a number](problems/power_rec.cpp) - Power of a number using recursion.
 * [Tower of Hanoi](problems/hanoi.cpp) - Tower of Hanoi using recursion.
 * [Kadane's Algorithm](problems/kadane.cpp) - Max sum of subarray using Kadane's algorithm.
+* [Unique pair](problems/pair.cpp) - Find Unique pair in an array with pairs of numbers.
 #### Files
 * [Count vowels,letters,words..](file/count.cpp) - To count number of lines, vowels, words, letters in a file.
 * [Read and write a file](file/rdwr.cpp) - To read and write in a file.
