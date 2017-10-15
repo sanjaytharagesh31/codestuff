@@ -31,6 +31,7 @@ errors||bugs ? please do pull request : Add new code;
 * [Queue](list/queue.cpp) - Linked list implimention of queue.
 * [Insert Node at N](list/insert_at_N.cpp) - Function to insert an element at a given position in linked list.
 * [Merge linked list](list/merge.cpp) - Function to merge two sorted linked list into one sorted linked list.
+* [Binary trees](list/treeimple.cpp) - To implement trees using linked lists.
 #### Pattern Printing
 * [Triangle](patterns/design1.cpp) - To print Left-Bottom-Triangle.
 * [Pyramid](patterns/design2.cpp) - To print Pyramid.
