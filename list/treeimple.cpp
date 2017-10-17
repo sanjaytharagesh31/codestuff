@@ -17,6 +17,7 @@ class BinaryTree {
 		void inorder(node *ptr);
 		void preorder(node *ptr);
 		void postorder(node *ptr);
+		int getHeight(node *ptr);
 };
 
 void BinaryTree::insert(int value) {
@@ -83,6 +84,17 @@ void BinaryTree::postorder(node *ptr) {
 	}
 }
 
+int BinaryTree::getHeight(node *ptr) {
+	if(ptr == NULL)
+		return -1;
+	int leftheight = getHeight(ptr->lchild);
+	int rightheight = getHeight(ptr->rchild);
+	if(leftheight > rightheight)
+		return leftheight + 1;
+	else 
+		return rightheight + 1;
+}
+
 int main() {
 	BinaryTree obj;
 	int choice;
@@ -92,7 +104,8 @@ int main() {
 		cout<<"2) Inoder traversal"<<endl;
 		cout<<"3) Preorder traversal"<<endl;
 		cout<<"4) Postorder traversal"<<endl;
-		cout<<"5) Exit"<<endl;
+		cout<<"5) Find height of tree"<<endl;
+		cout<<"6) Exit"<<endl;
 		cin>>choice;
 		switch(choice) {
 			case 1:
@@ -111,6 +124,9 @@ int main() {
 				obj.postorder(obj.root);
 				break;
 			case 5:
+				cout<<obj.getHeight(obj.root)<<endl;
+				break;
+			case 6:
 				exit(0);
 			default:
 				cout<<"Wrong choice reenter again"<<endl;
