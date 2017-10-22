@@ -37,6 +37,12 @@ errors||bugs ? please do pull request : Add new code;
 * [Pyramid](patterns/design2.cpp) - To print Pyramid.
 * [Triangle](patterns/design3.cpp) - To print Left Bottom Triangle (numbers).
 * [Fibbonacci](patterns/fibbonacci.cpp) - Fibbonacci series printing.
+* [Three-bonacci](patterns/three-bonacci.cpp) - T_i = \begin{cases}
+      	A_0 & \text{ if } i = 0; \\
+        A_1 & \text{ if } i = 1; \\
+        A_2 & \text{ if } i = 2; \\
+        T_{i - 1} + T_{i - 2} - T_{i - 3} & \text{ otherwise.}
+      \end{cases}
 #### Searching
 * [Linear Search](searching/linearsearch.cpp) - Array implemention.
 * [Binary Search](searching/binarysearch.cpp) - Array implemention.
