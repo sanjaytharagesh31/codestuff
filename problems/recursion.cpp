@@ -43,6 +43,16 @@ int largest(int arr[], int n) { // to find the largest element in a given array 
 	return max(arr[n], largest(arr, n-1));
 	}
 	
+long int threeBonacci(long int n) { //tree-bonacci series
+	if(n == 0)
+		return a0;
+	else if(n == 1)
+		return a1;
+	else if(n == 2)
+		return a2;
+	else 
+		return threeBonacci(n-1) + threeBonacci(n-2) - threeBonacci(n-3);
+	}
 	
 int main(){
 	pattern1(10);
@@ -52,5 +62,6 @@ int main(){
 	cout<<binocoeff(5, 2)<<endl;
 	cout<<fib(5)<<endl;
 	cout<<largest(arr, 11-1)<<endl;
+	cout<<threeBonacci(10)<<endl;
 	return 0;
 }
