@@ -26,7 +26,7 @@ errors||bugs ? please do pull request : Add new code;
 * [Count vowels,letters,words..](file/count.cpp) - To count number of lines, vowels, words, letters in a file.
 * [Read and write a file](file/rdwr.cpp) - To read and write in a file.
 #### List
-* [List](list/listimple.cpp) - Implementation of list using <b>STL<b>.
+* [List](list/listimple.cpp) - Implementation of list using <b>STL</b>.
 * [Stack](list/stack.cpp) - Linked list implimention of stack.
 * [Queue](list/queue.cpp) - Linked list implimention of queue.
 * [Insert Node at N](list/insert_at_N.cpp) - Function to insert an element at a given position in linked list.
