@@ -39,6 +39,7 @@ errors || bugs ? Do Pull Request : Add New \<code>;
 * [Fibbonacci](patterns/fibbonacci.cpp) - Fibbonacci series printing.
 * [Three-bonacci](patterns/three-bonacci.cpp) 
 * [Vertical half diamond](patterns/design3.c)
+* [Triangle](patterns/design4.c) - To print a perfect triangle.
 #### Searching
 * [Linear Search](searching/linearsearch.cpp) - Array implemention.
 * [Binary Search](searching/binarysearch.cpp) - Array implemention.
