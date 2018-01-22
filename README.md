@@ -37,7 +37,8 @@ errors || bugs ? Do Pull Request : Add New \<code>;
 * [Pyramid](patterns/design2.cpp) - To print Pyramid.
 * [Triangle](patterns/design3.cpp) - To print Left Bottom Triangle (numbers).
 * [Fibbonacci](patterns/fibbonacci.cpp) - Fibbonacci series printing.
-* [Three-bonacci](patterns/three-bonacci.cpp) - 
+* [Three-bonacci](patterns/three-bonacci.cpp) 
+* [Vertical half diamond](patterns/design3.c)
 #### Searching
 * [Linear Search](searching/linearsearch.cpp) - Array implemention.
 * [Binary Search](searching/binarysearch.cpp) - Array implemention.
