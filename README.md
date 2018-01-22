@@ -40,6 +40,7 @@ errors || bugs ? Do Pull Request : Add New \<code>;
 * [Three-bonacci](patterns/three-bonacci.cpp) 
 * [Vertical half diamond](patterns/design3.c)
 * [Triangle](patterns/design4.c) - To print a perfect triangle.
+* [Pyramid](patterns/design5.c) - To print Alphabet pyramid.
 #### Searching
 * [Linear Search](searching/linearsearch.cpp) - Array implemention.
 * [Binary Search](searching/binarysearch.cpp) - Array implemention.
