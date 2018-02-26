@@ -45,9 +45,9 @@ errors || bugs ? Do Pull Request : Add New \<code>;
 * [Linear Search](searching/linearsearch.cpp) - Array implemention.
 * [Binary Search](searching/binarysearch.cpp) - Array implemention.
 #### Sorting
-* [Bubble-Srot](sorting/bubblesort.cpp) - Array implemention.
-* [Insertion-Srot](sorting/insertionsort.cpp) - Array implemention.
-* [Selection-Srot](sorting/selectionsort.cpp) - Array implemention.
+* [Bubble-Sort](sorting/bubblesort.cpp) - Array implemention.
+* [Insertion-Sort](sorting/insertionsort.cpp) - Array implemention.
+* [Selection-Sort](sorting/selectionsort.cpp) - Array implemention.
 * [Vector-sort](sorting/vectsort.cpp) - Vector implementation.
 #### String
 * [Delete Sub-string](string/delsubstrin.cpp) - To delete a substring from a main string.
