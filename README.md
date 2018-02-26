@@ -56,4 +56,4 @@ errors || bugs ? Do Pull Request : Add New \<code>;
 * [String Stream](string/stringstream.cpp) - Simple program to implement stringstream.
 #### Graphs
 * [Breadth first search](graphs/BFS.cpp)
-
+* [Depth first search](graphs/DFS.cpp)
