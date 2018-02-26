@@ -54,3 +54,6 @@ errors || bugs ? Do Pull Request : Add New \<code>;
 * [Reverse the word](string/reverseword.cpp) - To reverse the words in a string.
 * [Search sub-string](string/srchsubstrg.cpp) - To find the position of a given substring.
 * [String Stream](string/stringstream.cpp) - Simple program to implement stringstream.
+#### Graphs
+* [Breadth first search](graphs/BFS.cpp)
+
