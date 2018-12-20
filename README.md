@@ -59,3 +59,4 @@ errors || bugs ? Do Pull Request : Add New \<code>;
 #### Graphs
 * [Breadth first search](graphs/BFS.cpp)
 * [Depth first search](graphs/DFS.cpp)
+* [Dijkstra algorithm](graphs/dijkstra.cpp)
