@@ -1,6 +1,6 @@
 # codestuff
 C++ Programs for beginners <br>
-errors || bugs ? Do Pull Request : Add New \<code>; 
+Errors || Bugs ? Do Pull Request : Add New \<code>; 
 ### Navigate 
 #### First program
 * [Hello World program](helloworld.cpp).
