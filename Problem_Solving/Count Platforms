@@ -1,0 +1,26 @@
+/*
+Given two arrays (both of size n), one containing arrival time of trains and other containing the corresponding trains departure time (in the form of an integer) respectively. Return the minimum number of platform required, such that no train waits.
+Arrival and departure time of a train can't be same.
+*/
+
+#include<bits/stdc++.h>
+int platformsNeeded(int arrival[], int departure[], int n) {
+    /*
+     * Don't write main().
+     * Don't read input, it is passed as function argument.
+     * Don't print anything just return integer value.
+     */
+    int cnt = 0;
+    vector<pair<int, int>> v;
+    for(int i=0; i<n; i++)  {
+        v.push_back(make_pair(arrival[i], 1));
+        v.push_back(make_pair(departure[i], -1));
+    }
+    sort(v.begin(), v.end());
+    int mx=INT_MIN;
+    for(int i=0; i<v.size(); i++) {
+        cnt += v[i].second;
+        mx = max(mx, cnt);
+    }
+    return mx;
+}
