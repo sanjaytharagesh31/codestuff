@@ -1,0 +1,49 @@
+/*
+Gary has two string S and V. Now Gary wants to know the length shortest subsequence in S such that it is not a subsequence in V.
+*/
+
+int dp[1500][1500] = {};
+
+int recur(char* a, char* b, int m, int n) {
+    if(dp[m][n] != -1)
+        return dp[m][n];
+    if(m == 0) {
+        dp[m][n] =1500;
+        return 1500;
+    }
+    else if(n <= 0) {
+        dp[m][n] = 1;
+        return 1;
+    }
+    else {
+        int not_pick = recur(a+1, b, m-1, n);
+        int k = 0;
+        for(; k<n; k++) {
+            if(a[0] == b[k])
+                break;
+        }
+        if(k == n)
+            return 1;
+        int pick = 1 + recur(a+1, b+k+1, m-1, n-k-1);
+        dp[m][n] = min(not_pick, pick); 
+        return dp[m][n];
+    }
+}
+
+int solve(string S,string V) {
+    int m = S.length();
+    int n = V.length();
+    char *a = new char[m+1];
+    char *b = new char[n+1];
+    for(int i=0; i<m; i++)
+        a[i] = S[i];
+	for(int i=0; i<n; i++)
+        b[i] = V[i];
+    // cout << recur(a, b, m, n) << endl;
+    for(int i=0; i<1500; i++) {
+        for(int j=0; j<1500; j++) {
+            dp[i][j] = -1;
+        }
+    }
+    return recur(a, b, m, n);
+}
