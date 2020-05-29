@@ -1,0 +1,38 @@
+/*
+On a Sunday morning, some friends have joined to play: Game of Names. There is an N x N board. Each player is playing, turn by turn. At the turn of ith player, the player places first character of its name at one of the unfilled cells. The first player who places its character for 3 consecutive vertical, horizontal or diagonal cells is the winner.
+You are provided a board with some filled and some unfilled cells. You have to tell the winner. If there is no winner, then you must print “ongoing”.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+	int n;
+    cin >> n;
+    vector< vector<char> > arr(n+10, vector<char>(n+10, '.'));
+    for(int i=2; i<n+2; i++) {
+        for(int j=2; j<n+2; j++) {
+            cin >> arr[i][j];
+        }
+    }
+	for(int i=2; i<n+2; i++) {
+        for(int j=2; j<n+2; j++) {
+            if(arr[i][j] == '.')
+                continue;
+            else if(
+              (arr[i][j]==arr[i-1][j]&&arr[i-1][j]==arr[i-2][j]) || 
+              (arr[i][j]==arr[i-1][j+1]&&arr[i-1][j+1]==arr[i-2][j+2]) ||
+              (arr[i][j]==arr[i][j+1]&&arr[i][j+1]==arr[i][j+2]) ||
+              (arr[i][j]==arr[i+1][j+1]&&arr[i+1][j+1]==arr[i+2][j+2]) ||
+              (arr[i][j]==arr[i+1][j]&&arr[i+1][j]==arr[i+2][j]) ||
+              (arr[i][j]==arr[i+1][j-1]&&arr[i+1][j-1]==arr[i+2][j-2]) ||
+              (arr[i][j]==arr[i][j-1]&&arr[i][j-1]==arr[i][j-2]) ||
+              (arr[i][j]==arr[i-1][j-1]&&arr[i-1][j-1]==arr[i-2][j-2])
+              ) {
+                cout << arr[i][j] << endl;
+                return 0;
+            }
+        }
+    }
+    cout << "ongoing" << endl;
+    return 0;    
+}
