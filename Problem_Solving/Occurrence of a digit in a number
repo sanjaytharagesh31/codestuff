@@ -1,0 +1,23 @@
+/*
+Given an integer n. Count the number of occurrences of a digit d in all numbers from 0 to n(inclusive).
+*/
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n, d;
+    int cnt = 0;
+    cin >> n >> d;
+    for(int i=1; i<=n; i++) {
+        int num = i;
+        while(num > 0) {
+            if(num%10 == d)
+                cnt++;
+        	num /= 10;
+        }
+    }
+    cout << cnt << endl;
+	return 0;
+}
