@@ -1,0 +1,62 @@
+/*
+You are given N integer sequences A1, A2, ..., AN. Each of these sequences contains N elements. You should pick N elements, one from each sequence; let's denote the element picked from sequence Ai by Ei. For each i (2 ≤ i ≤ N), Ei should be strictly greater than Ei-1.
+Compute the maximum possible value of E1 + E2 + ... + EN. If it's impossible to pick the elements E1, E2, ..., EN, print -1 instead.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+typedef vector< vector<int> > vv;
+int n;
+
+int solve(vv &v, int r, int prev) {
+    int sum = -1;
+    if(r == n-1) {
+        for(int i=0; i<n; i++)
+            if(v[r][i] > prev)
+            	sum = max(sum, v[r][i]);
+    }
+    
+    else {
+    	for(int i=0; i<n; i++)
+        	if(v[r][i] > prev && solve(v, r+1, v[r][i]) != -1)
+                sum  = max(sum, v[r][i] + solve(v, r+1, v[r][i]));
+    }
+    
+    return sum;
+}
+
+int main() {
+    cin >> n;
+    vv v(n, vector<int>(n));
+    vv dp(n+10, vector<int>(n+10));
+    
+    for(int i=0; i<n; i++)
+        for(int j=0; j<n; j++)
+            cin >> v[i][j];
+    for(int i=0; i<n; i++)
+        sort(v[i].begin(), v[i].end());
+    
+    for(int i=0; i<n; i++) //fill dp for the last row
+        dp[n-1][i] = v[n-1][i];
+        
+    for(int i=n-2; i>=0; i--) { 
+        for(int j=0; j<n; j++) {
+            int mx = -1;
+            for(int k=0; k<n; k++) {
+                if(dp[i+1][k]!=-1 && v[i+1][k] > v[i][j]) {
+                    mx = max(mx, dp[i+1][k]);
+                }
+            }
+            if(mx == -1)
+                dp[i][j] = -1;
+            else
+           		dp[i][j] = mx + v[i][j];
+        }
+    }
+    int ans = INT_MIN;
+    for(int i=0; i<n; i++)
+        ans = max(ans, dp[0][i]);
+    cout << ans << endl;
+    
+	return 0;
+}
