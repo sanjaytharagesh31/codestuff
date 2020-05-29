@@ -1,0 +1,44 @@
+/*
+You are given 2 strings: String P and String Q. Your task is to convert P into Q, if possible, using the following operation:
+You can pick any character of P and put it in front of the string. In other words, you can pick any character and put it  at 0th index of the string.
+If it is possible, find the minimum number of operations to convert string P into Q. If it is not possible to convert P into Q, print -1.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string p, q;
+    cin >> p >> q;
+    int l1, l2;
+    l1 = p.length();
+    l2 = q.length();
+    int cp[26]={}, cq[26]={};
+    for(char ch : p)
+        cp[ch-'A']++;
+    for(char ch : q)
+        cq[ch-'A']++;
+    for(int i=0; i<26; i++) {
+        if(cp[i]!=cq[i]) {
+            cout << "-1" << endl;
+            return 0;
+        }
+	}
+    int i = l1-1;
+    int j = l2-1;
+    int rs = 0;
+    while(i>=0 && j>=0) {
+        if(p[i] == q[j]) {
+            i--;
+            j--;
+        }
+        else {
+            while(i>=0 && p[i]!=q[j]) {
+                rs++;
+                i--;
+            }
+        }
+    }
+    cout << rs << endl;
+    return 0;
+}
