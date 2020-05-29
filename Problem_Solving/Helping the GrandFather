@@ -1,0 +1,29 @@
+/*
+Akansha has done the first task. Now, her mother tells her to help her Grandfather. Her Grandfather has weak vision.
+He wants to read an article. Article contains characters, these characters can be letters of the English alphabet, digits and ‘.’ character. She had an app, which used to scan each character and replace that by a matrix of ZR rows and ZR columns. All the characters of the matrix with dimensions ZR and ZC are same and equal to that scanned character.
+Can you help Akansha by writing a programme which enlarges the input matrix of characters in the same as her app used to do.
+*/
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+	int r, c, zr, zc;
+    cin >> r >> c >> zr >> zc;
+    char ch;
+    char ans[1000][1000];
+    for(int i=0; i<r; i++) {
+        for(int j=0; j<c; j++) {
+            cin >> ch;
+            for(int p=i*zr; p<i*zr+zr; p++) {
+                for(int q=j*zc; q<j*zc+zc; q++) {
+                    ans[p][q] = ch;
+                }
+            }
+        }
+    }
+    for(int i=0; i<r*zr; i++) {
+        for(int j=0; j<c*zc; j++) {
+            cout << ans[i][j] ;
+        }
+        cout << endl;
+    }
+}
