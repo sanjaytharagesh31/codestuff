@@ -1,0 +1,47 @@
+/*
+There are N enemy buildings placed in a row and numbered from left to right starting from 0. Each building i (except the first and the last) has exactly two adjacent buildings with indices i-1 and i+1. The first and the last buildings have just a single adjacent building.
+Some of the buildings contain bombs. When bomb explodes in some building it destroys it and buildings adjacent to it.
+You are given the string S of length N, where Si is 1 if the i-th building contains bomb, 0 otherwise. Find the number of buildings that will not be destroyed after all bombs explode.
+Note: All bombs explode simultaneously.
+*/
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    string str, tmp;
+    int n;
+    cin >> n;
+    cin >> str;
+    tmp = str;
+    int cnt = 0;
+    for(int i=0; i<n; i++) {
+        if(i == 0) {
+            if(str[i] == '1') {
+                tmp[i] = '*';
+                tmp[i+1] = '*';
+            }
+        } 
+        else if(i >= 1 && i<=n-2) {
+            if(str[i] == '1') {
+                tmp[i-1] = '*';
+                tmp[i+1] = '*';
+                tmp[i] = '*';
+        	} 
+        }
+        else {
+            if(str[i] == '1') {
+                tmp[i] = '*';
+                tmp[i-1] = '*';
+            }
+        }
+    }
+    // cout << endl;
+    for(auto x : tmp) {
+        if(x != '*')
+            cnt++;
+    }
+    // cout << tmp << endl;
+    cout << cnt << endl;
+	return 0;
+}
