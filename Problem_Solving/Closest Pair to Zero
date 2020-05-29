@@ -1,0 +1,33 @@
+/*
+You have been given an array of integers with both positive and negative numbers. You need to find a pair of numbers such that its sum is closest or equal to zero.
+If you have many pairs with sum closest to zero, print the pair whose smaller value is smallest among all the pairs.
+For example: For the array: [-4, -3, -2, -1, 1, 2, 3, 4], there are 4 pairs whose sum is closest to zero. The four pairs are: (-4, 4), (-3, 3), (-2, 2) and (-1, 1). Out of these pairs, the smallest of smaller values is -4, so, the answer should be the pair: (-4, 4).
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+    cin >> n;
+    int arr[n];
+    for(int i=0; i<n; i++)
+        cin >> arr[i];
+	sort(arr, arr+n);
+    int i = 0;
+    int j = n-1;
+    int a, b;
+    a = 10000;
+    b = 10000;
+    while(i < j) {
+        if(abs(arr[i]+arr[j]) < abs(a+b)) {
+            a = arr[i];
+            b = arr[j];
+        }
+        if(arr[i]+arr[j] < 0)
+            i++;
+        else
+            j--;
+    }
+    cout << a << " " << b << endl;
+}
