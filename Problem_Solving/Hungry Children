@@ -1,0 +1,26 @@
+/*
+There are N chocolates on the table. The teacher is distributing the chocolates one by one. Mannerless and hungry children don’t wait for their chance and come again and again for the chocolates. The teacher is looking over this. She scolds a child if at a given time, the child has already taken more chocolates than count of all the chocolates with other children.
+You are given name of child who takes ith chocolate. You have to tell number of times teacher had to scold.
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    vector<string> v(n);
+    for(int i=0; i<n; i++)
+        cin >> v[i];
+    map<string,  int> mp;
+    int cnt = 0;
+    int scold = 0;
+    for(int i=0; i<n; i++) {
+        if(mp[v[i]] > cnt-mp[v[i]]) 
+            scold++;
+        mp[v[i]]++;
+    	cnt++;
+    }
+    // for(auto x : mp)
+    //     cout << x.first << " " << x.second << endl;
+    cout << scold << endl;
+}
