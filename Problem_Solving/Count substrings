@@ -1,0 +1,55 @@
+/* Count palindromic substrings
+*/
+
+#include <bits/stdc++.h>
+
+int countPalindromeSubstrings(char s[]) {
+    int l = strlen(s);
+    int cnt = 0;
+    for(int i=0; i<l; i++) {
+        cnt++;
+        int left = i-1;
+        int right = i+1;
+        while(left>=0 && right<l && s[left] == s[right]) {
+            cnt++;
+            left--;
+            right++;
+        }
+        left = i;
+        right = i+1;
+        while(left>=0 && right<l && s[left]==s[right]) {
+            cnt++;
+            left--;
+            right++;
+        }
+    }
+    return cnt;
+    // bool dp[l][l] = {false};
+    // for(int i=0; i<l; i++) 
+    //     dp[i][i] = true;
+    // for(int i=0; i+2-1<l; i++) {
+    //     if(s[i] == s[i+1])
+    //         dp[i][i+1] = true;
+    //     else
+    //         dp[i][i+1] = false;
+    // }
+    // for(int i=3; i<=l; i++) {
+    //     for(int j=0; j+i-1<l; j++) {
+    //         int st = j;
+    //         int ed = j+i-1;
+    //         if(s[st] == s[ed])
+    //             dp[st][ed] = dp[st+1][ed-1];
+    //         else
+    //             dp[st][ed] = false;
+    //     }
+    // }
+    // long int sum = 0;
+    // for(int i=0; i<l; i++) {
+    //     for(int j=i; j<l; j++) {
+    //         if(dp[i][j])
+    //             sum++;
+    //     }
+    // }
+    // return sum;
+}
+
