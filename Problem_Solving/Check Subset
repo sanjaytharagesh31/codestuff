@@ -1,0 +1,16 @@
+/*
+Given two integer arrays. Check if second array is a subset of first array.
+*/
+
+bool CheckSubset(int arr1[], int n1, int arr2[], int n2) {
+	map<int, int> mp;
+    for(int i=0; i<n1; i++) {
+        mp[arr1[i]]++;
+    }
+    for(int i=0; i<n2; i++) {
+        if(mp[arr2[i]] == 0)
+            return false;
+        mp[arr2[i]]--;
+    }
+    return true;
+}
