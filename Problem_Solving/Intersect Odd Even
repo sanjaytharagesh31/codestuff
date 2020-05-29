@@ -1,0 +1,65 @@
+/*
+Given two sorted linked lists. Create a linked list with common elements such that all common odd elements are before common even elements.
+You just need to return the head of new linked list formed, don't print the elements.
+Note: The relative order of even and odd nodes should not change.
+*/
+
+// Following is the node structure
+/**************
+class ListNode{
+	public:
+	int data;
+	ListNode* next;
+};
+
+ListNode* newListNode(int data){
+	ListNode *temp = new ListNode;
+    	temp->data = data;
+    	temp->next = NULL;
+    	return temp;
+}
+***************/
+
+ListNode* AlterList(ListNode* head1, ListNode* head2) {
+	ListNode* even = NULL;
+    ListNode* odd = NULL;
+    ListNode* et = NULL;
+    ListNode* ot = NULL;
+    ListNode* cur1 = head1;
+    ListNode* cur2 = head2;
+    while(cur1!=NULL && cur2!=NULL) {
+        if(cur1->data > cur2->data)
+            cur2 = cur2->next;
+        else if(cur1->data < cur2->data)
+            cur1 = cur1->next;
+        else {
+            int d = cur1->data;
+            if(d % 2 == 0) {
+                if(even == NULL) {
+                    even = newListNode(d);
+                	et = even;
+                }
+                else {
+                    et->next = newListNode(d);
+                	et = et->next;	
+                }
+            }
+            else {
+                if(odd == NULL) {
+                    odd = newListNode(d);
+                    ot = odd;
+                }
+                else {
+                    ot->next = newListNode(d);
+                	ot = ot->next;
+                }
+            }
+            cur1 = cur1->next;
+            cur2 = cur2->next;
+        }
+    }
+    if(odd == NULL)
+        return even;
+    ot->next = even;
+    return odd;
+}
