@@ -1,0 +1,31 @@
+/*
+You are given an array of positive integers as input. Write a code to return the length of the largest such subsequence in which the values are arranged first in strictly ascending order and then in strictly descending order.
+Such a subsequence is known as bitonic subsequence. A purely increasing or purely decreasing subsequence will also be considered as a bitonic sequence with the other part empty.
+*/
+
+#include<bits/stdc++.h>
+#define f first
+#define s second
+
+int longestBitonicSubarray(int *input, int n) {
+    vector<int> inc(n, 1);
+    vector<int> dec(n, 1);
+    for(int i=0; i<n; i++) {
+        for(int j=0; j<i; j++) {
+            if(input[j] < input[i] && inc[i] < 1+inc[j])
+            	inc[i] = 1+inc[j];
+        }
+    }
+    for(int i=n-1; i>=0; i--) {
+        for(int j=n-1; j>i; j--) {
+            if(input[i] > input[j] && dec[i] < 1+dec[j])
+                dec[i] = 1+dec[j];
+        }
+    }
+    int ans = 0;
+    for(int i=0; i<n; i++) {
+        ans = max(ans, inc[i]+dec[i]-1);
+    }
+    return ans;
+}
+
