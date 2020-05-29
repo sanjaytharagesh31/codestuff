@@ -1,0 +1,74 @@
+/*
+Given 2 sorted arrays (in increasing order), find a path through the intersections that produces maximum sum and return the maximum sum.
+That is, we can switch from one array to another array only at common elements.
+If no intersection element is present, we need to take sum of all elements from the array with greater sum.
+*/
+
+int m, n;
+
+long solve(int arr1[], int arr2[], int i, int j, int num) {
+    if(j>=n || i>=m)
+        return 0;
+    else if(num == 1) {
+        int k = -1;
+        for(int p=j; p<n; p++) {
+            if(arr2[p] == arr1[i]) {
+                k = p;
+                break;
+            }
+        }
+        if(k == -1 || k == n-1 || j>=n)
+            return arr1[i] + solve(arr1, arr2, i+1, j, 1);
+        else {
+            return arr1[i]+max(solve(arr1, arr2, i+1, j, 1), 
+                               solve(arr1, arr2, i+1, k+1, 2));
+        }
+    }
+    else {
+        int k = -1;
+        for(int p=i; p<m; p++) {
+            if(arr1[p] == arr2[j]) {
+                k = p;
+                break;
+            }
+        }
+        if(k == -1 || k == m-1 || i>=m)
+            return arr2[j] + solve(arr1, arr2, i, j+1, 2);
+        else {
+            return arr2[j]+max(solve(arr1, arr2, i, j+1, 2), 
+                               solve(arr1, arr2, k+1, j+1, 1));
+        }
+    }
+}
+
+long maxPathSum(int ar1[], int ar2[], int a, int b) {
+    int i, j, s1, s2;
+    long ans = 0;
+    m = a;
+    n = b;
+    s1 = s2 = i = j = 0;
+    while(i < m && j < n) {
+        while(ar1[i] != ar2[j] && i < m && j < n) {
+            if(ar1[i] > ar2[j])
+                s2 += ar2[j++];
+        	else
+                s1 += ar1[i++];
+        }
+        if(i >= m || j>= n)
+            break;
+        s1 += ar1[i];
+        s2 += ar2[j];
+        ans += max(s1, s2);
+        s1 = 0;
+        s2 = 0;
+        i++;
+        j++;
+    }
+    while(i < m)
+        s1 += ar1[i++];
+    while(j < n)
+        s2 += ar2[j++];
+    ans += max(s1, s2);
+    return ans;
+    // return max(solve(ar1, ar2, 0, 0, 1), solve(ar1, ar2, 0, 0, 2));    
+}
