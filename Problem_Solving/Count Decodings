@@ -1,0 +1,27 @@
+/*
+Given the mapping a = 1, b = 2, ... z = 26, and an encoded message, count the number of ways it can be decoded.
+For example, the message '111' would give 3, since it could be decoded as 'aaa', 'ka', and 'ak'.
+You can assume that the messages are decodable. For example, '001' is not allowed.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int solve(string str, int n) {
+    if(n == 0 || n == 1)
+        return 1;
+	int cnt = 0;
+    if(str[n-1] > '0') 
+        cnt = solve(str, n-1);
+    if(str[n-2]=='1' || (str[n-2]=='2' && str[n-1]<='6'))
+        cnt += solve(str, n-2);
+    return cnt;
+}
+
+int main() {
+	string str;
+    cin >> str;
+    cout << solve(str, str.length()) << endl;
+    return 0;
+}
