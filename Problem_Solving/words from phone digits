@@ -1,0 +1,39 @@
+//https://www.geeksforgeeks.org/find-possible-words-phone-digits/
+//Print all possible words from phone digits
+
+#include <bits/stdc++.h>
+using namespace std;
+
+map<char, string> mp;
+vector<string> ans;
+
+void solve(string str, string tmp, int p) {
+    if(p == str.length()) {
+        ans.push_back(tmp);
+    }
+    else {
+        string code = mp[str[p]];
+        for(int i=0; i<code.length(); i++) {
+            solve(str, tmp+code[i], p+1);
+        }
+    }
+}
+
+int main() {
+    ans.clear();
+    mp['2'] = "abc";
+    mp['3'] = "def";
+    mp['4'] = "ghi";
+    mp['5'] = "jkl";
+    mp['6'] = "mno";
+    mp['7'] = "pqrs";
+    mp['8'] = "tuv";
+    mp['9'] = "wxyz";
+    string str;
+    cin >> str;
+    solve(str, "", 0);
+    cout << ans.size() << endl;
+    for(int i=0; i<ans.size(); i++)
+        cout << ans[i] << " " ;
+    return 0;
+}
