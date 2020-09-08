@@ -4,30 +4,21 @@
 using namespace std;
 
 int partition(vector<int> &arr, int l, int h) {
-    int pivot = l;
-    int i=l+1;
-    int j=h;
-    while(true) {
-        while(arr[i]<=arr[pivot]) {
-            i++;
+    int pivot = h;
+    int index = l-1;
+    for(int i=l; i<h; i++) {
+        if(arr[i] <= arr[pivot]) {
+            index++;
+            swap(arr[index], arr[i]);
         }
-        while(arr[j]>arr[pivot]) {
-            j--;
-        }
-        if(i>j) {
-            int tmp = arr[j];
-            arr[j] = arr[pivot];
-            arr[pivot] = tmp;
-            return j;
-        }
-        int tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
     }
+    swap(arr[index+1], arr[h]);
+    return index+1;
+    
 }
 
 void quickSort(vector<int> &arr, int l, int h) {
-    if(l<h){
+    if(l < h) {
         int p = partition(arr, l, h);
         quickSort(arr, l, p-1);
         quickSort(arr, p+1, h);
@@ -35,10 +26,10 @@ void quickSort(vector<int> &arr, int l, int h) {
 }
 
 int main() {
-    vector<int> arr{1,4,2,3,56,3,-5,0,0,4,4,56,90};
-    int n = arr.size();
-    quickSort(arr, 0, n-1);
+    vector<int> arr= {9,3,23,543,54,657,658,32,33,4,45,5756,757,8,654,324,3214,46,4658};
+    // vector<int> arr = {9};
+    quickSort(arr, 0, arr.size()-1);
     for(int x : arr)
-        cout << x << " ";
+        cout << x << " " ;
     return 0;
 }
